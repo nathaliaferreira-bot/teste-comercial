@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Comercial — 15/mai/2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+:root{
+  --bg:#eef0f5;--wh:#fff;--sf:#f7f8fa;--b1:#e2e8f0;--b2:#edf2f7;
+  --red:#b91c1c;--rbg:#fef2f2;--rbd:#fecaca;
+  --ora:#c2410c;--obg:#fff7ed;--obd:#fed7aa;
+  --grn:#15803d;--gbg:#f0fdf4;--gbd:#bbf7d0;
+  --blu:#1d4ed8;--bbg:#eff6ff;--bbd:#bfdbfe;
+  --txt:#111827;--sub:#374151;--mut:#6b7280;--lit:#9ca3af;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.nav{background:#1e293b;padding:11px 32px;display:flex;align-items:center;gap:0;position:sticky;top:0;z-index:300}
+.nav-t{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-right:28px}
+.nav-t span{color:#60a5fa}
+.nb{padding:8px 20px;font-size:13px;font-weight:600;color:#94a3b8;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.nb.on{color:#fff;border-bottom-color:#3b82f6}
+.hdr{background:var(--wh);border-bottom:1px solid var(--b1);padding:15px 32px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.hdr-t{font-family:'Syne',sans-serif;font-size:22px;font-weight:800}
+.hdr-t span{color:var(--blu)}
+.hdr-s{font-size:12px;color:var(--mut);margin-top:3px}
+.pill{background:var(--bg);border:1px solid var(--b1);border-radius:99px;padding:5px 14px;font-size:13px;color:var(--mut);display:flex;align-items:center;gap:6px}
+.pulse{width:8px;height:8px;border-radius:50%;background:#16a34a;animation:p 2s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+.strip{background:var(--wh);border-bottom:2px solid var(--b1);padding:12px 32px;display:flex;overflow-x:auto;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.st{padding:4px 28px 4px 0;margin-right:28px;border-right:1px solid var(--b2);flex-shrink:0}
+.st:last-child{border:none}
+.st-n{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;line-height:1.1}
+.st-l{font-size:12px;color:var(--mut);margin-top:3px}
+.tabs{background:var(--wh);border-bottom:1px solid var(--b1);padding:0 32px;display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tg{display:flex;flex-direction:column;border-right:1px solid var(--b2);padding:0 5px;min-width:0}
+.tg:last-child{border:none}
+.tg-l{font-size:10px;color:var(--lit);letter-spacing:.5px;text-transform:uppercase;padding:7px 9px 2px;white-space:nowrap;font-weight:600}
+.tg-r{display:flex}
+.tab{padding:10px 13px;background:none;border:none;border-bottom:2px solid transparent;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--mut);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px}
+.tab.on{color:var(--blu);border-bottom-color:var(--blu);font-weight:600}
+.d8{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.body{padding:24px 32px 48px;max-width:1400px}
+.page{display:none}.page.on{display:block}
+.panel{display:none}.panel.on{display:block}
+
+/* DAILY */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:900px){.dgrid{grid-template-columns:1fr}}
+.dc{background:var(--wh);border:1px solid var(--b1);border-radius:12px;overflow:hidden}
+.dch{padding:12px 18px;border-bottom:1px solid var(--b2);display:flex;align-items:center;justify-content:space-between}
+.dct{font-family:'Syne',sans-serif;font-size:16px;font-weight:800}
+.dcb{padding:14px 18px}
+.dr{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--b2);font-size:14px}
+.dr:last-child{border:none}
+.dl{color:var(--sub)}
+.dv{font-weight:600;display:flex;align-items:center;gap:6px}
+.dm{font-size:12px;color:var(--mut);font-weight:400}
+.ds{padding:6px 0 6px 16px;border-bottom:1px solid var(--b2);display:flex;justify-content:space-between;font-size:13px}
+.ds:last-child{border:none}
+.cg{color:var(--grn)}.co{color:var(--ora)}.cr{color:var(--red)}.cb{color:var(--blu)}
+.badge{display:inline-flex;font-size:11px;font-weight:500;padding:3px 9px;border-radius:99px;border:1px solid}
+.bg-g{background:var(--gbg);color:var(--grn);border-color:var(--gbd)}
+.bg-o{background:var(--obg);color:var(--ora);border-color:var(--obd)}
+.bg-r{background:var(--rbg);color:var(--red);border-color:var(--rbd)}
+
+/* SDR */
+.sh{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.ss{font-size:13px;color:var(--mut);display:flex;align-items:center;gap:5px}
+.card{background:var(--wh);border:1px solid var(--b1);border-radius:13px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04);margin-bottom:24px}
+.cmr{padding:14px 22px;display:flex;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--b1);gap:2px}
+.cm{display:flex;flex-direction:column;gap:3px;padding-right:22px;margin-right:22px;border-right:1px solid var(--b2)}
+.cm:last-child{border:none}
+.cv{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;line-height:1.1}
+.cl{font-size:11px;color:var(--mut);letter-spacing:.4px;text-transform:uppercase;margin-top:1px}
+.cv.r{color:var(--red)}.cv.o{color:var(--ora)}.cv.g{color:var(--grn)}.cv.b{color:var(--blu)}.cv.gy{color:var(--lit)}
+.need{padding:13px 22px;font-size:14px;line-height:1.8;color:var(--sub);border-bottom:1px solid var(--b2)}
+.need strong{color:var(--txt);font-weight:600}
+.rrbig{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--red)}
+.lev{padding:10px 22px;background:var(--sf);border-bottom:1px solid var(--b2);font-size:13px;color:var(--sub);line-height:1.8}
+.lev strong{color:var(--txt)}
+.rdiv{display:flex;align-items:center;gap:10px;padding:10px 22px 8px;background:var(--sf);border-top:1px solid var(--b2);border-bottom:1px solid var(--b2)}
+.rl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.rc{font-size:12px;color:var(--lit)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:820px}
+th{text-align:left;font-size:11px;color:var(--mut);letter-spacing:.3px;text-transform:uppercase;padding:11px 14px 9px;border-bottom:2px solid var(--b1);background:var(--sf);font-weight:600;white-space:nowrap}
+td{padding:13px 14px;border-bottom:1px solid var(--b2);vertical-align:middle;font-size:14px}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#fafbfe}
+.ini{display:inline-flex;align-items:center;justify-content:center;width:33px;height:33px;border-radius:8px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;flex-shrink:0;vertical-align:middle;margin-right:9px}
+.snm{font-weight:600;font-size:14px;display:inline;vertical-align:middle}
+.bdg{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;line-height:1.5;margin-top:4px}
+.bdg-r{background:var(--rbg);color:var(--red);border:1px solid var(--rbd)}
+.bdg-o{background:var(--obg);color:var(--ora);border:1px solid var(--obd)}
+.bdg-g{background:var(--gbg);color:var(--grn);border:1px solid var(--gbd)}
+.bdg-b{background:var(--bbg);color:var(--blu);border:1px solid var(--bbd)}
+.bdg-gy{background:var(--bg);color:var(--mut);border:1px solid var(--b1)}
+.mc{min-width:62px}
+.mv{font-size:16px;font-weight:600}
+.mr{font-size:11px;color:var(--lit);margin-top:2px}
+.mv.r{color:var(--red)}.mv.o{color:var(--ora)}.mv.g{color:var(--grn)}.mv.gy{color:var(--lit)}
+.bar{height:4px;border-radius:2px;background:var(--b2);margin-top:4px;width:60px}
+.bf{height:100%;border-radius:2px}
+.rrv{font-family:'Syne',sans-serif;font-size:20px;font-weight:800}
+.rrs{font-size:11px;color:var(--lit);margin-top:2px}
+.rrbr{height:5px;width:56px;background:var(--b2);border-radius:2px;margin-top:5px}
+.rrbf{height:100%;border-radius:2px}
+.ac{font-size:13px;line-height:1.75;color:var(--sub);max-width:310px}
+.ac strong{color:var(--txt);font-weight:600}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:.2px;text-transform:uppercase;margin-right:4px}
+.t-r{background:var(--rbg);color:var(--red);border:1px solid var(--rbd)}
+.t-o{background:var(--obg);color:var(--ora);border:1px solid var(--obd)}
+.t-g{background:var(--gbg);color:var(--grn);border:1px solid var(--gbd)}
+.t-b{background:var(--bbg);color:var(--blu);border:1px solid var(--bbd)}
+.t-gy{background:var(--bg);color:var(--mut);border:1px solid var(--b1)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-t">Daily <span>Comercial</span></div>
+  <button class="nb on" onclick="showPage('daily',this)">📋 Resumo Daily</button>
+  <button class="nb" onclick="showPage('sdr',this)">⚡ Ações SDR</button>
+</div>
+
+<!-- PAGE 1: DAILY -->
+<div class="page on" id="page-daily">
+  <div class="hdr">
+    <div><div class="hdr-t">Resumo <span>Daily</span></div><div class="hdr-s">15 DE MAIO DE 2026 · SEMANA 20 · DADOS DAILY 15/mai ✓</div></div>
+    <div class="pill"><span class="pulse"></span>Ao vivo</div>
+  </div>
+  <div class="strip">
+    <div class="st"><div class="st-n co">63%</div><div class="st-l">Renovação / meta mai</div></div>
+    <div class="st"><div class="st-n co">66%</div><div class="st-l">Novas / meta mai</div></div>
+    <div class="st"><div class="st-n cg">105%</div><div class="st-l">RR/SDR HT Part</div></div>
+    <div class="st"><div class="st-n cr">54%</div><div class="st-l">RR/SDR Outbound</div></div>
+    <div class="st"><div class="st-n" style="color:var(--mut)">11</div><div class="st-l">DUs restantes</div></div>
+  </div>
+  <div class="body">
+    <div class="dgrid">
+      <div class="dc">
+        <div class="dch"><div class="dct" style="color:#6d28d9">Renovação — Geral</div><span class="badge bg-o">63% meta mai</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Booked Revenue mai</span><span class="dv co">R$ 658K <span class="dm">/ R$ 2,3M</span></span></div>
+          <div class="dr"><span class="dl">Escolas Fechadas</span><span class="dv cr">28 <span class="dm">/ 162 (39%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv co">72% <span class="dm">/ meta 101%</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv co">39 <span class="dm">/ 160 (54%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv co">0,80 <span class="dm">/ meta 1,33</span> 🟡</span></div>
+          <div class="ds"><span style="color:var(--mut)">HT Part +5k</span><span class="dv cg">1,05 / 1,00 (105%) 🟢</span></div>
+          <div class="ds"><span style="color:var(--mut)">HT Púb +5k 🚨</span><span class="dv cr">0,13 / 1,40 (9%) 🔴</span></div>
+          <div class="ds"><span style="color:var(--mut)">LT Part -5k</span><span class="dv co">1,04 / 1,80 (58%) 🟡</span></div>
+          <div class="ds"><span style="color:var(--mut)">LT Púb -5k</span><span class="dv cr">18% meta 🔴</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#f5f3ff"><div class="dct" style="color:#6d28d9">HT Part +5k</div><span class="badge bg-g">105% RR/SDR ✅</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv co">R$ 547K <span class="dm">/ R$ 1,4M (87%)</span></span></div>
+          <div class="dr"><span class="dl">Escolas Fechadas</span><span class="dv cr">14 <span class="dm">/ 78 (40%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv cr">61% <span class="dm">/ 130% (47%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv co">23 <span class="dm">/ 60 (85%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv cg">1,05 <span class="dm">/ meta 1,00 (105%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl" style="color:var(--red)">⚠️ Tx fechamento</span><span class="dv cr">47% da meta — foco do closer</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#fee2e2"><div class="dct" style="color:var(--red)">HT Púb +5k 🚨</div><span class="badge bg-r">9% RR/SDR</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv co">R$ 41K <span class="dm">/ R$ 188K (49%)</span></span></div>
+          <div class="dr"><span class="dl">Escolas Fechadas</span><span class="dv cr">3 <span class="dm">/ 22 (30%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv cg">100% <span class="dm">/ meta 80% (125%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv cr">3 <span class="dm">/ 28 (24%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv cr">0,13 <span class="dm">/ meta 1,40 (9%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl" style="color:var(--red)">Chirley ausente</span><span class="dv cr">Cauan: 1 agend, 0 aparição</span></div>
+      <div class="dc">
+        <div class="dch" style="background:#eff6ff"><div class="dct" style="color:var(--blu)">Novas — Geral</div><span class="badge bg-o">66% mai</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Booked Revenue mai</span><span class="dv co">R$ 281K <span class="dm">/ R$ 938K (66%)</span></span></div>
+          <div class="dr"><span class="dl">Convertidas</span><span class="dv co">41 <span class="dm">/ 154 (59%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv co">36% <span class="dm">/ 47% (77%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv cg">113 <span class="dm">/ 239 (105%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv co">0,40 <span class="dm">/ meta 0,41 (98%)</span> 🟡</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#dbeafe"><div class="dct" style="color:#1d4ed8">Anos Anteriores</div><span class="badge bg-o">84% meta mai</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv co">R$ 85K <span class="dm">/ R$ 330K (57%)</span></span></div>
+          <div class="dr"><span class="dl">Convertidas</span><span class="dv co">14 <span class="dm">/ 41 (75%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv co">38% <span class="dm">/ 61% (63%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv co">26 <span class="dm">/ 69 (84%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv co">0,58 <span class="dm">/ meta 0,69 (84%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl" style="color:var(--red)">⚠️ Aparição</span><span class="dv cr">Evelyn 3 no-shows — FUP urgente</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#dcfce7"><div class="dct" style="color:#15803d">Concorrência ✅</div><span class="badge bg-g">META BATIDA</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv cg">R$ 31K <span class="dm">/ R$ 61K (113%)</span></span></div>
+          <div class="dr"><span class="dl">Convertidas</span><span class="dv cg">6 <span class="dm">/ 8 (168%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv cr">22% <span class="dm">/ 45% (48%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv cg">23 <span class="dm">/ 22 (232%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv cg">0,88 <span class="dm">/ meta 0,55 (159%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl" style="color:var(--red)">⚠️ Tx fechamento</span><span class="dv cr">22% — closer precisa converter mais</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#d1fae5"><div class="dct" style="color:#065f46">Retração ✅</div><span class="badge bg-g">139% meta mai</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv cg">R$ 99K <span class="dm">/ R$ 240K (92%)</span></span></div>
+          <div class="dr"><span class="dl">Convertidas</span><span class="dv co">9 <span class="dm">/ 29 (69%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Fechada/Realizadas</span><span class="dv co">50% <span class="dm">/ 60% (83%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv cg">32 <span class="dm">/ 53 (134%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR</strong></span><span class="dv cg">0,74 <span class="dm">/ meta 0,53 (139%)</span> 🟢</span></div>
+          <div class="dr"><span class="dl" style="color:var(--ora)">⚠️ Josue Burgo</span><span class="dv co">0 RR — tx agend zerada</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch" style="background:#fff7ed"><div class="dct" style="color:var(--ora)">Outbound ⚠️</div><span class="badge bg-r">54% RR/SDR</span></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">Receita mai</span><span class="dv co">R$ 51K <span class="dm">/ R$ 212K (54%)</span></span></div>
+          <div class="dr"><span class="dl">Convertidas</span><span class="dv cr">5 <span class="dm">/ 26 (42%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">Realizadas</span><span class="dv co">32 <span class="dm">/ 95 (75%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl"><strong>RR/SDR geral</strong></span><span class="dv cr">0,15 <span class="dm">/ 0,28 (54%)</span> 🔴</span></div>
+          <div class="dr"><span class="dl">RR/SDR rampado</span><span class="dv co">0,23 <span class="dm">/ 0,35 (65%)</span> 🟡</span></div>
+          <div class="dr"><span class="dl" style="color:var(--red)">7 SDRs tx agend = 0%</span><span class="dv cr">Revisar discurso urgente</span></div>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dch"><div class="dct">Marketing</div></div>
+        <div class="dcb">
+          <div class="dr"><span class="dl">LT Novas</span><span class="dv cr">R$ 14K / R$ 95K (34%) 🔴</span></div>
+          <div class="dr"><span class="dl">Renov -5k Part</span><span class="dv cr">R$ 44K / R$ 402K (24%) 🔴</span></div>
+          <div class="dr"><span class="dl">Renov -5k Púb</span><span class="dv cr">R$ 26K / R$ 323K (18%) 🔴</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: SDR -->
+<div class="page" id="page-sdr">
+  <div class="hdr">
+    <div><div class="hdr-t">Ações <span>SDR</span></div><div class="hdr-s">SEMANA 20 · 4 DUs (11–14/mai) · 11 DUs restantes em mai · Ref = mediana top-3 · Abord = contatadas</div></div>
+    <div class="pill"><span class="pulse"></span>Ao vivo</div>
+  </div>
+  <div class="strip" id="sdr-strip"></div>
+  <div class="tabs" id="sdr-tabs"></div>
+  <div class="body" id="sdr-body"></div>
+</div>
+
+<script>
+function showPage(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('page-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+
+// ── DADOS REAIS — semana 20, planilha SDR 2026 atualizada 15/mai ──
+// tx_agend = agend ÷ total_de_escolas_efetivas × 100
+// lig_dia  = Total Ligações ÷ (dias − diasOff)
+// abord_dia = Total de escolas atendidas ÷ (dias − diasOff)
+const SDR_RAW = {
+"BR - Concorrência - Part":[
+  {nome:"Julia Santos",ramp:"Rampado",ir:true,st:"",dias:4,rr:5,brr:5,ns:1,gap:0,rec:1,txa:41.7,tapa:100.0,ld:80.2,ad:26.2,rr_sdr_mai:1.0,txa_mai:31.4,tapa_mai:90.9,ld_mai:76.3,ad_mai:26.3,lev:"manter",ac:"5 RR \u00b7 80 lig/dia \u00b7 26 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 1 pendente(s) para recuperar."},
+  {nome:"Angelle Cunha",ramp:"Rampado",ir:true,st:"",dias:4,rr:4,brr:4,ns:2,gap:0,rec:1,txa:50.0,tapa:100.0,ld:71.2,ad:35.5,rr_sdr_mai:0.6,txa_mai:46.2,tapa_mai:100.0,ld_mai:67.9,ad_mai:34.2,lev:"manter",ac:"4 RR \u00b7 71 lig/dia \u00b7 36 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 1 pendente(s) para recuperar."},
+  {nome:"Tainan Samary",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:4,ns:3,gap:1,rec:1,txa:100.0,tapa:75.0,ld:47.8,ad:23.2,rr_sdr_mai:0.7,txa_mai:58.8,tapa_mai:70.0,ld_mai:50.4,ad_mai:26.1,lev:"manter",ac:"3 RR \u00b7 48 lig/dia \u00b7 23 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 1 pendente(s) para recuperar."},
+],
+"BR - Anos Anteriores - Part":[
+  {nome:"evelyn arruda",ramp:"Rampado",ir:true,st:"",dias:4,rr:5,brr:7,ns:6,gap:0,rec:3,txa:25.0,tapa:100.0,ld:53.8,ad:28.8,rr_sdr_mai:0.5,txa_mai:21.2,tapa_mai:71.4,ld_mai:54.0,ad_mai:29.4,lev:"manter",ac:"5 RR \u00b7 54 lig/dia \u00b7 29 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 3 pendente(s) para recuperar."},
+  {nome:"Ane Caires",ramp:"Rampado",ir:true,st:"",dias:4,rr:4,brr:6,ns:2,gap:0,rec:4,txa:30.0,tapa:100.0,ld:73.0,ad:38.2,rr_sdr_mai:0.6,txa_mai:28.6,tapa_mai:100.0,ld_mai:67.3,ad_mai:35.9,lev:"tx_agend",ac:"J\u00e1 fez 6 RR numa semana (S3, 64 lig/dia). Tx agend <strong>30.0%</strong> vs ref <strong>66.7%</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Amanda Carvalho",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:10,ns:3,gap:3,rec:1,txa:42.9,tapa:50.0,ld:137.2,ad:36.2,rr_sdr_mai:1.0,txa_mai:54.2,tapa_mai:76.9,ld_mai:131.0,ad_mai:35.4,lev:"aparicao",ac:"J\u00e1 fez 10 RR numa semana (S12, 99 lig/dia). 3 de 6 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Yasmin Cunto",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:5,ns:2,gap:3,rec:1,txa:30.0,tapa:50.0,ld:100.5,ad:40.2,rr_sdr_mai:0.4,txa_mai:24.3,tapa_mai:44.4,ld_mai:94.9,ad_mai:41.2,lev:"aparicao",ac:"J\u00e1 fez 5 RR numa semana (S3, 95 lig/dia). 3 de 6 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Elane Souza",ramp:"Rampado",ir:true,st:"",dias:4,rr:1,brr:2,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:65.5,ad:33.5,rr_sdr_mai:0.1,txa_mai:20.0,tapa_mai:50.0,ld_mai:81.6,ad_mai:38.4,lev:"tx_agend",ac:"J\u00e1 fez 2 RR numa semana (S18, 74 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>33.3%</strong> \u2192 <strong>recuperar o ritmo</strong>"},
+  {nome:"Elane Souza",ramp:"Rampando n\u00edvel 5-Est",ir:false,st:"",dias:4,rr:1,brr:2,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:65.5,ad:33.5,rr_sdr_mai:0.1,txa_mai:null,tapa_mai:null,ld_mai:65.5,ad_mai:33.5,lev:"tx_agend",ac:"J\u00e1 fez 2 RR numa semana (S18, 74 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>33.3%</strong> \u2192 <strong>recuperar o ritmo</strong>"},
+],
+"BR - Retração - Part":[
+  {nome:"Gabriel Spak",ramp:"Rampado",ir:true,st:"",dias:4,rr:6,brr:6,ns:3,gap:0,rec:2,txa:60.0,tapa:100.0,ld:65.0,ad:32.2,rr_sdr_mai:0.9,txa_mai:50.0,tapa_mai:100.0,ld_mai:66.8,ad_mai:33.4,lev:"manter",ac:"6 RR \u00b7 65 lig/dia \u00b7 32 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 2 pendente(s) para recuperar."},
+  {nome:"Suzanny Vidal",ramp:"Rampado",ir:true,st:"",dias:4,rr:6,brr:8,ns:6,gap:2,rec:3,txa:72.7,tapa:75.0,ld:58.5,ad:31.2,rr_sdr_mai:1.0,txa_mai:76.2,tapa_mai:62.5,ld_mai:56.2,ad_mai:29.0,lev:"manter",ac:"6 RR \u00b7 58 lig/dia \u00b7 31 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 3 pendente(s) para recuperar."},
+  {nome:"Bianca Gonzaga",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:4,ns:0,gap:2,rec:0,txa:55.6,tapa:60.0,ld:92.2,ad:26.8,rr_sdr_mai:0.6,txa_mai:36.4,tapa_mai:75.0,ld_mai:83.2,ad_mai:27.5,lev:"aparicao",ac:"J\u00e1 fez 4 RR numa semana (S18, 65 lig/dia). 2 de 5 agendamentos desta semana n\u00e3o realizados. FUP urgente."},
+  {nome:"Marcelle Barbosa",ramp:"Rampado",ir:true,st:"",dias:4,rr:2,brr:3,ns:2,gap:0,rec:2,txa:14.3,tapa:100.0,ld:123.8,ad:28.2,rr_sdr_mai:0.2,txa_mai:17.4,tapa_mai:50.0,ld_mai:113.5,ad_mai:31.1,lev:"manter",ac:"2 RR \u00b7 124 lig/dia \u00b7 28 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 2 pendente(s) para recuperar."},
+  {nome:"Josue Burgo",ramp:"Rampado",ir:true,st:"",dias:3,rr:0,brr:5,ns:4,gap:0,rec:4,txa:null,tapa:null,ld:68.6,ad:22.3,rr_sdr_mai:0.5,txa_mai:30.4,tapa_mai:71.4,ld_mai:65.5,ad_mai:20.9,lev:"tx_agend",ac:"J\u00e1 fez 5 RR numa semana (S19, 63 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>40.0%</strong> \u2192 <strong>+4 RR/semana</strong>"},
+],
+"BR - Renovação - HT - Púb":[
+  {nome:"Cauan Celestino",ramp:"Rampado",ir:true,st:"",dias:2,rr:0,brr:1,ns:2,gap:1,rec:1,txa:33.3,tapa:0.0,ld:66.5,ad:20.5,rr_sdr_mai:0.1,txa_mai:33.3,tapa_mai:50.0,ld_mai:64.1,ad_mai:18.7,lev:"aparicao",ac:"J\u00e1 fez 1 RR numa semana (S19, 63 lig/dia). 1 de 1 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Chirley Ramos",ramp:"Rampado",ir:true,st:"",dias:0,rr:0,brr:12,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:75.0,ad_mai:26.0,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar."},
+],
+"BR - Renovação - HT - Part":[
+  {nome:"Beatriz Picorelli",ramp:"Rampado",ir:true,st:"",dias:4,rr:7,brr:16,ns:2,gap:0,rec:2,txa:233.3,tapa:100.0,ld:88.8,ad:22.8,rr_sdr_mai:1.2,txa_mai:157.1,tapa_mai:100.0,ld_mai:72.6,ad_mai:18.4,lev:"abordadas",ac:"J\u00e1 fez 16 RR numa semana (S9, 84 lig/dia). Abord/dia <strong>23</strong> vs ref <strong>34</strong> \u2192 <strong>+8 RR/semana</strong>"},
+  {nome:"Daniela Garcia",ramp:"Rampado",ir:true,st:"",dias:4,rr:6,brr:17,ns:0,gap:0,rec:1,txa:23.1,tapa:100.0,ld:62.8,ad:27.5,rr_sdr_mai:0.2,txa_mai:16.7,tapa_mai:100.0,ld_mai:54.4,ad_mai:20.4,lev:"tx_agend",ac:"J\u00e1 fez 17 RR numa semana (S7, 66 lig/dia). Tx agend <strong>23.1%</strong> vs ref <strong>33.3%</strong> \u2192 <strong>+8 RR/semana</strong>"},
+  {nome:"Beatriz Moreira",ramp:"Rampado",ir:true,st:"",dias:0,rr:0,brr:13,ns:2,gap:0,rec:3,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.2,txa_mai:50.0,tapa_mai:66.7,ld_mai:12.2,ad_mai:7.5,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar. S19: 3 pendente(s) para recuperar."},
+  {nome:"Kesley Raisa",ramp:"Rampado",ir:true,st:"",dias:0,rr:0,brr:9,ns:1,gap:0,rec:1,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.4,txa_mai:150.0,tapa_mai:100.0,ld_mai:37.5,ad_mai:14.0,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar. S19: 1 pendente(s) para recuperar."},
+  {nome:"Daniela Garcia",ramp:"Rampando n\u00edvel 2-Est",ir:false,st:"",dias:4,rr:6,brr:17,ns:0,gap:0,rec:1,txa:23.1,tapa:100.0,ld:62.8,ad:27.5,rr_sdr_mai:0.6,txa_mai:23.1,tapa_mai:100.0,ld_mai:62.8,ad_mai:27.5,lev:"tx_agend",ac:"J\u00e1 fez 17 RR numa semana (S7, 66 lig/dia). Tx agend <strong>23.1%</strong> vs ref <strong>33.3%</strong> \u2192 <strong>+8 RR/semana</strong>"},
+],
+"BR - Novas - HT - Part":[
+  {nome:"Ana Sofia Castro",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:4,ns:2,gap:1,rec:2,txa:25.0,tapa:75.0,ld:52.8,ad:19.5,rr_sdr_mai:0.3,txa_mai:25.0,tapa_mai:60.0,ld_mai:56.9,ad_mai:19.4,lev:"manter",ac:"3 RR \u00b7 53 lig/dia \u00b7 20 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 2 pendente(s) para recuperar."},
+  {nome:"Luan Carvalho",ramp:"Rampado",ir:true,st:"",dias:4,rr:3,brr:6,ns:2,gap:0,rec:2,txa:20.0,tapa:100.0,ld:70.0,ad:17.0,rr_sdr_mai:0.5,txa_mai:12.0,tapa_mai:100.0,ld_mai:67.9,ad_mai:19.1,lev:"tx_agend",ac:"J\u00e1 fez 6 RR numa semana (S18, 49 lig/dia). Tx agend <strong>20.0%</strong> vs ref <strong>33.3%</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Giselle Alcantara",ramp:"Rampado",ir:true,st:"",dias:4,rr:2,brr:2,ns:0,gap:0,rec:0,txa:7.4,tapa:100.0,ld:69.2,ad:21.8,rr_sdr_mai:0.0,txa_mai:2.3,tapa_mai:0.0,ld_mai:89.0,ad_mai:27.8,lev:"manter",ac:"2 RR \u00b7 69 lig/dia \u00b7 22 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Luciana Benevides",ramp:"Rampado",ir:true,st:"",dias:4,rr:2,brr:5,ns:2,gap:0,rec:2,txa:12.5,tapa:100.0,ld:52.5,ad:24.2,rr_sdr_mai:0.6,txa_mai:16.1,tapa_mai:100.0,ld_mai:50.7,ad_mai:24.8,lev:"tx_agend",ac:"J\u00e1 fez 5 RR numa semana (S10, 34 lig/dia). Tx agend <strong>12.5%</strong> vs ref <strong>20.0%</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Mariana Nogueira",ramp:"Rampado",ir:true,st:"",dias:4,rr:2,brr:4,ns:3,gap:0,rec:1,txa:13.3,tapa:100.0,ld:67.8,ad:34.0,rr_sdr_mai:0.3,txa_mai:14.3,tapa_mai:75.0,ld_mai:61.6,ad_mai:31.0,lev:"manter",ac:"2 RR \u00b7 68 lig/dia \u00b7 34 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 1 pendente(s) para recuperar."},
+  {nome:"Sarah Pedroso",ramp:"Rampado",ir:true,st:"",dias:4,rr:2,brr:2,ns:1,gap:0,rec:2,txa:50.0,tapa:100.0,ld:59.8,ad:23.2,rr_sdr_mai:0.3,txa_mai:36.4,tapa_mai:75.0,ld_mai:54.9,ad_mai:20.7,lev:"manter",ac:"2 RR \u00b7 60 lig/dia \u00b7 23 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 2 pendente(s) para recuperar."},
+  {nome:"Annita Charantola",ramp:"Rampado",ir:true,st:"",dias:4,rr:1,brr:1,ns:2,gap:4,rec:1,txa:31.2,tapa:20.0,ld:50.0,ad:32.8,rr_sdr_mai:0.2,txa_mai:25.0,tapa_mai:33.3,ld_mai:50.8,ad_mai:33.3,lev:"aparicao",ac:"J\u00e1 fez 1 RR numa semana (S19, 52 lig/dia). 4 de 5 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Beatriz Souza",ramp:"Rampado",ir:true,st:"",dias:4,rr:1,brr:1,ns:0,gap:0,rec:0,txa:25.0,tapa:100.0,ld:81.0,ad:15.5,rr_sdr_mai:0.0,txa_mai:50.0,tapa_mai:0.0,ld_mai:53.4,ad_mai:15.0,lev:"manter",ac:"1 RR \u00b7 81 lig/dia \u00b7 16 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Beatriz Ignacio",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:1,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:72.5,ad:21.5,rr_sdr_mai:0.1,txa_mai:20.0,tapa_mai:100.0,ld_mai:71.6,ad_mai:19.0,lev:"tx_agend",ac:"J\u00e1 fez 1 RR numa semana (S18, 70 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>17.2%</strong> \u2192 <strong>+1 RR/semana</strong>"},
+  {nome:"Bruna Machado",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:0,ns:0,gap:1,rec:0,txa:11.1,tapa:0.0,ld:91.0,ad:30.0,rr_sdr_mai:0.0,txa_mai:10.0,tapa_mai:0.0,ld_mai:85.4,ad_mai:30.2,lev:"aparicao",ac:"1 de 1 agendamentos desta semana n\u00e3o realizados. FUP urgente."},
+  {nome:"Eduarda Froehlich (Dudinha)",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:2,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:80.0,ad:32.5,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:74.0,ad_mai:31.4,lev:"tx_agend",ac:"J\u00e1 fez 2 RR numa semana (S12, 109 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>8.3%</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Eduardo Costa",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:2,ns:1,gap:2,rec:1,txa:50.0,tapa:0.0,ld:66.5,ad:22.8,rr_sdr_mai:0.1,txa_mai:75.0,tapa_mai:33.3,ld_mai:68.2,ad_mai:25.4,lev:"aparicao",ac:"J\u00e1 fez 2 RR numa semana (S17, 33 lig/dia). 2 de 2 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Guilherme Alves",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:1,ns:1,gap:1,rec:1,txa:14.3,tapa:0.0,ld:71.8,ad:18.2,rr_sdr_mai:0.0,txa_mai:7.7,tapa_mai:0.0,ld_mai:67.2,ad_mai:17.1,lev:"aparicao",ac:"J\u00e1 fez 1 RR numa semana (S17, 34 lig/dia). 1 de 1 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Julia Bravo",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:5,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:72.0,ad:24.2,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:54.2,ad_mai:18.2,lev:"tx_agend",ac:"J\u00e1 fez 5 RR numa semana (S5, 71 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>15.8%</strong> \u2192 <strong>+4 RR/semana</strong>"},
+  {nome:"Ketlien Vargas",ramp:"Rampado",ir:true,st:"",dias:0,rr:0,brr:4,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:14.0,ad_mai:8.0,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar."},
+  {nome:"Luigi Araujo",ramp:"Rampado",ir:true,st:"Transferido",dias:1,rr:0,brr:0,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:0.0,ad_mai:0.0,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar."},
+  {nome:"Giselle Alcantara",ramp:"Rampando n\u00edvel 3",ir:false,st:"",dias:4,rr:2,brr:2,ns:0,gap:0,rec:0,txa:7.4,tapa:100.0,ld:69.2,ad:21.8,rr_sdr_mai:0.2,txa_mai:7.4,tapa_mai:100.0,ld_mai:69.2,ad_mai:21.8,lev:"manter",ac:"2 RR \u00b7 69 lig/dia \u00b7 22 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Beatriz Lustosa G\u00f3es",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:1,brr:1,ns:2,gap:1,rec:0,txa:22.2,tapa:50.0,ld:46.8,ad:23.0,rr_sdr_mai:0.2,txa_mai:18.8,tapa_mai:66.7,ld_mai:41.1,ad_mai:23.0,lev:"aparicao",ac:"J\u00e1 fez 1 RR numa semana (S19, 37 lig/dia). 1 de 2 agendamentos desta semana n\u00e3o realizados. FUP urgente."},
+  {nome:"Beatriz Souza",ramp:"Rampando n\u00edvel 3",ir:false,st:"",dias:4,rr:1,brr:1,ns:1,gap:0,rec:0,txa:25.0,tapa:100.0,ld:81.0,ad:15.5,rr_sdr_mai:0.1,txa_mai:25.0,tapa_mai:100.0,ld_mai:81.0,ad_mai:15.5,lev:"manter",ac:"1 RR \u00b7 81 lig/dia \u00b7 16 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Beatriz Ignacio",ramp:"Rampando n\u00edvel 5",ir:false,st:"",dias:4,rr:0,brr:1,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:72.5,ad:21.5,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:72.5,ad_mai:21.5,lev:"tx_agend",ac:"J\u00e1 fez 1 RR numa semana (S18, 70 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>17.2%</strong> \u2192 <strong>+1 RR/semana</strong>"},
+  {nome:"Bruna Machado",ramp:"Rampando n\u00edvel 3",ir:false,st:"",dias:4,rr:0,brr:0,ns:1,gap:1,rec:0,txa:11.1,tapa:0.0,ld:91.0,ad:30.0,rr_sdr_mai:0.0,txa_mai:11.1,tapa_mai:0.0,ld_mai:91.0,ad_mai:30.0,lev:"aparicao",ac:"1 de 1 agendamentos desta semana n\u00e3o realizados. FUP urgente."},
+  {nome:"Davi Paix\u00e3o Teles Ara\u00fajo",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:3,rr:0,brr:0,ns:1,gap:0,rec:1,txa:null,tapa:null,ld:42.0,ad:13.3,rr_sdr_mai:0.0,txa_mai:16.7,tapa_mai:0.0,ld_mai:35.9,ad_mai:13.6,lev:"tx_agend",ac:" Tx agend <strong>0.0%</strong> vs ref <strong>16.7%</strong> \u2192 <strong>recuperar o ritmo</strong>"},
+  {nome:"D\u00e9bora Magna Nascimento Sousa",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:0,brr:2,ns:0,gap:1,rec:0,txa:12.5,tapa:0.0,ld:38.5,ad:15.8,rr_sdr_mai:0.2,txa_mai:12.5,tapa_mai:100.0,ld_mai:31.6,ad_mai:13.8,lev:"aparicao",ac:"J\u00e1 fez 2 RR numa semana (S19, 26 lig/dia). 1 de 1 agendamentos desta semana n\u00e3o realizados. FUP urgente."},
+  {nome:"Eduardo Costa",ramp:"Rampando n\u00edvel 5",ir:false,st:"",dias:4,rr:0,brr:2,ns:2,gap:2,rec:1,txa:50.0,tapa:0.0,ld:66.5,ad:22.8,rr_sdr_mai:0.0,txa_mai:50.0,tapa_mai:0.0,ld_mai:66.5,ad_mai:22.8,lev:"aparicao",ac:"J\u00e1 fez 2 RR numa semana (S17, 33 lig/dia). 2 de 2 agendamentos desta semana n\u00e3o realizados. FUP urgente. S19: 1 pendente(s) para recuperar."},
+  {nome:"Iasmin Oliveira da Fonseca",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:0,brr:0,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:25.8,ad:14.2,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:20.0,ad_mai:12.6,lev:"manter",ac:"0 RR \u00b7 26 lig/dia \u00b7 14 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Julia Bravo",ramp:"Rampando n\u00edvel 2-Est",ir:false,st:"",dias:4,rr:0,brr:5,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:72.0,ad:24.2,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:72.0,ad_mai:24.2,lev:"tx_agend",ac:"J\u00e1 fez 5 RR numa semana (S5, 71 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>15.8%</strong> \u2192 <strong>+4 RR/semana</strong>"},
+  {nome:"Kailane Lima",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:0,brr:0,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:57.0,ad:25.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:48.8,ad_mai:24.2,lev:"manter",ac:"0 RR \u00b7 57 lig/dia \u00b7 25 abord/dia. <span style='color:#16a34a'>Manter!</span>"},
+  {nome:"Lucas Tombini Pereira",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:0,brr:0,ns:2,gap:0,rec:1,txa:null,tapa:null,ld:66.5,ad:31.8,rr_sdr_mai:0.0,txa_mai:5.6,tapa_mai:0.0,ld_mai:54.8,ad_mai:27.9,lev:"tx_agend",ac:" Tx agend <strong>0.0%</strong> vs ref <strong>6.2%</strong> \u2192 <strong>recuperar o ritmo</strong>"},
+  {nome:"Luigi Araujo",ramp:"Rampando n\u00edvel 3",ir:false,st:"",dias:1,rr:0,brr:0,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:0.0,ad_mai:0.0,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar."},
+  {nome:"Ros\u00e2ngela Maria Lopes Matos",ramp:"Rampando n\u00edvel 2",ir:false,st:"",dias:4,rr:0,brr:0,ns:1,gap:0,rec:1,txa:null,tapa:null,ld:47.2,ad:33.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:49.0,ad_mai:31.9,lev:"manter",ac:"0 RR \u00b7 47 lig/dia \u00b7 33 abord/dia. <span style='color:#16a34a'>Manter!</span> S19: 1 pendente(s) para recuperar."},
+],
+"BR - Renovação - LT - Part":[
+  {nome:"Kesley Raisa",ramp:"Rampado",ir:true,st:"",dias:4,rr:9,brr:12,ns:8,gap:1,rec:4,txa:58.8,tapa:90.0,ld:36.8,ad:14.2,rr_sdr_mai:0.9,txa_mai:54.2,tapa_mai:69.2,ld_mai:40.3,ad_mai:17.2,lev:"abordadas",ac:"J\u00e1 fez 12 RR numa semana (S7, 59 lig/dia). Abord/dia <strong>14</strong> vs ref <strong>27</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Mariana Takada",ramp:"Rampado",ir:true,st:"",dias:1,rr:0,brr:9,ns:1,gap:0,rec:2,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.3,txa_mai:null,tapa_mai:100.0,ld_mai:27.5,ad_mai:8.8,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar. S19: 2 pendente(s) para recuperar."},
+],
+"MX - Novas":[
+  {nome:"Agostina Formoso",ramp:"Rampado",ir:true,st:"Transferido",dias:0,rr:0,brr:3,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:18.5,ad_mai:8.5,lev:"ausencia",ac:"Sem atividade esta semana \u2014 verificar."},
+  {nome:"Diossely Marin",ramp:"Rampado",ir:true,st:"F\u00e9rias",dias:1,rr:0,brr:5,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:0.0,ad:0.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:61.8,ad_mai:36.2,lev:"afastado",ac:"F\u00e9rias"},
+  {nome:"Natalhi Campos",ramp:"Rampado",ir:true,st:"",dias:3,rr:0,brr:3,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:15.0,ad:8.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:27.4,ad_mai:12.8,lev:"tx_agend",ac:"J\u00e1 fez 3 RR numa semana (S10, 82 lig/dia). Tx agend <strong>0.0%</strong> vs ref <strong>44.4%</strong> \u2192 <strong>+2 RR/semana</strong>"},
+  {nome:"Nathalia Maurojorge",ramp:"Rampado",ir:true,st:"",dias:4,rr:0,brr:0,ns:0,gap:0,rec:0,txa:null,tapa:null,ld:16.8,ad:8.0,rr_sdr_mai:0.0,txa_mai:null,tapa_mai:null,ld_mai:21.0,ad_mai:10.3,lev:"abordadas",ac:" Abord/dia <strong>8</strong> vs ref <strong>12</strong> \u2192 <strong>recuperar o ritmo</strong>"},
+],
+};
+
+const CFG = {
+"BR - Renovação - HT - Part":{label:"Renov HT Part",sup:"Carol Barroso",hdr:"#ede9fe",dot:"#7c3aed",status:"verde",meta:60,feito:23,meta_sdr:1.00,atual:1.05,need:4,faltam:37,nota:"🟢 RR/SDR acima da meta (105%)! Foco na tx fechamento (47%) — cada RR precisa fechar.",split:false},
+"BR - Renovação - LT - Part":{label:"Renov LT Part",sup:"Carol Barroso",hdr:"#ccfbf1",dot:"#0d9488",status:"vermelho",meta:72,feito:13,meta_sdr:1.80,atual:1.04,need:6,faltam:59,nota:"Mariana ausente. Kesley segurando com 9 RR mas 6 no-shows. Retorno de Mariana = urgente.",split:false},
+"BR - Anos Anteriores - Part":{label:"Anos Anteriores",sup:"Luana Melansky",hdr:"#dbeafe",dot:"#2563eb",status:"amarelo",meta:69,feito:26,meta_sdr:0.69,atual:0.58,need:4,faltam:43,nota:"3 SDRs com tx agendamento abaixo de 30%. Ane Caires maior potencial de recovery.",split:false},
+"BR - Concorrência - Part":{label:"Concorrência",sup:"Luana Melansky",hdr:"#dcfce7",dot:"#16a34a",status:"verde",meta:22,feito:23,meta_sdr:0.55,atual:0.88,need:0,faltam:0,nota:"🟢 Meta batida! 23/22 RR. Manter ritmo — atenção à tx fechamento (22%).",split:false},
+"BR - Retração - Part":{label:"Retração",sup:"Taínes Oliveira",hdr:"#d1fae5",dot:"#059669",status:"verde",meta:53,feito:32,meta_sdr:0.53,atual:0.74,need:2,faltam:21,nota:"🟢 Acima da meta (139%). Josue Burgo com tx agend zerada — único ponto de atenção.",split:false},
+"BR - Novas - HT - Part":{label:"Novas — HT / Outbound",sup:"Letícia / Adriano",hdr:"#fff7ed",dot:"#f97316",status:"vermelho",meta:60,feito:16,meta_sdr:0.28,atual:0.15,need:4,faltam:44,nota:"7 SDRs com tx agend = 0%. Problema é conversão, não volume. Escuta de áudio em massa.",split:true},
+"BR - Renovação - HT - Púb":{label:"Renov HT Púb 🚨",sup:"Carol Barroso",hdr:"#fee2e2",dot:"#dc2626",status:"vermelho",meta:28,feito:3,meta_sdr:1.40,atual:0.13,need:3,faltam:25,nota:"Chirley ausente. Cauan único SDR ativo: 1 agend, 1 no-show, 0 RR. Foco total no FUP.",split:false},
+"MX - Novas":{label:"MX — Novas",sup:"Andrea / Julia",hdr:"#cffafe",dot:"#0891b2",status:"vermelho",meta:95,feito:28,meta_sdr:0.35,atual:0.19,need:7,faltam:67,nota:"Diossely em férias. Natalhi: 15 lig/dia (pico 104). Nathalia: 17 lig/dia (pico 49). Volume crítico.",split:false},
+};
+
+const TAB_GROUPS=[
+  {lbl:"Renovação",keys:["BR - Renovação - HT - Part","BR - Renovação - LT - Part","BR - Renovação - HT - Púb"]},
+  {lbl:"Novas",keys:["BR - Anos Anteriores - Part","BR - Concorrência - Part","BR - Retração - Part"]},
+  {lbl:"Novas HT / Outbound",keys:["BR - Novas - HT - Part"]},
+  {lbl:"Internacional",keys:["MX - Novas"]},
+];
+
+const SC={vermelho:"#b91c1c",amarelo:"#c2410c",verde:"#15803d"};
+const DC={vermelho:"#ef4444",amarelo:"#f97316",verde:"#22c55e"};
+const IP=[["#dbeafe","#1e3a8a"],["#ede9fe","#4c1d95"],["#dcfce7","#14532d"],["#fee2e2","#7f1d1d"],["#fef9c3","#713f12"],["#ccfbf1","#134e4a"],["#fce7f3","#831843"],["#e0f2fe","#075985"],["#d1fae5","#065f46"],["#ffe4e6","#881337"],["#f3e8ff","#581c87"],["#fef3c7","#92400e"]];
+
+function ini(n){return n.split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase()}
+function ist(i){const c=IP[i%IP.length];return`background:${c[0]};color:${c[1]}`}
+function pct(a,b){return b>0?Math.round(a/b*100):0}
+function pcls(p){return p>=85?"g":p>=60?"o":"r"}
+
+function ltag(l,st){
+  if(st==="Férias"||st==="Afastamento")return`<span class="tag t-gy">${st}</span>`;
+  if(st==="Desligado")return`<span class="tag t-r">Desligado</span>`;
+  if(st==="Transferido")return`<span class="tag t-gy">Transferido</span>`;
+  const M={ausencia:["t-r","Ausente"],tx_agend:["t-r","Tx Agend ↓"],ligacoes:["t-b","Lig ↓"],abordadas:["t-b","Abord ↓"],aparicao:["t-o","Aparição ↓"],manter:["t-g","Em Ritmo"],afastado:["t-gy","Afastado"]};
+  const[c,t]=M[l]||["t-gy",l];return`<span class="tag ${c}">${t}</span>`;
+}
+function lbdg(l,st){
+  if(st==="Férias"||st==="Afastamento")return`<span class="bdg bdg-gy">${st}</span>`;
+  if(st==="Desligado")return`<span class="bdg bdg-r">Desligado</span>`;
+  if(st==="Transferido")return`<span class="bdg bdg-gy">Transferido</span>`;
+  const M={ausencia:["bdg-r","Ausente"],tx_agend:["bdg-r","Tx Agend ↓"],ligacoes:["bdg-b","Lig ↓"],abordadas:["bdg-b","Abord ↓"],aparicao:["bdg-o","Aparição ↓"],manter:["bdg-g","Em Ritmo"],afastado:["bdg-gy","Afastado"]};
+  const[c,t]=M[l]||["bdg-gy",l];return`<span class="bdg ${c}">${t}</span>`;
+}
+function bb(v,best,w=60){
+  if(v===null)return`<div class="bar" style="width:${w}px"><div class="bf" style="width:0;background:#e5e7eb"></div></div>`;
+  const p=best>0?Math.min(100,Math.round(v/best*100)):v>0?100:0;
+  const c=p>=80?"#16a34a":p>=50?"#f97316":"#ef4444";
+  return`<div class="bar" style="width:${w}px"><div class="bf" style="width:${p}%;background:${c}"></div></div>`;
+}
+function mc(cur,mai,d=1,u=""){
+  // cur = this week value, mai = may average
+  const cls=mai>0?(cur/mai>=0.8?"g":cur/mai>=0.5?"o":"r"):"gy";
+  const dp=cur===null?"—":cur.toFixed(d)+(u?" "+u:"");
+  const bd=mai>0?mai.toFixed(d)+(u?" "+u:""):"—";
+  const p=mai>0?Math.min(100,Math.round((cur||0)/mai*100)):0;
+  const bc=p>=80?"#16a34a":p>=50?"#f97316":"#ef4444";
+  const bar=`<div class="bar"><div class="bf" style="width:${p}%;background:${bc}"></div></div>`;
+  return`<div class="mc"><div class="mv ${cur===null?"gy":cls}">${dp}</div><div class="mr">mai ${bd}</div>${bar}</div>`;
+}
+
+function buildRow(s,si){
+  const rp=s.rr_sdr_mai>0?Math.min(100,Math.round(s.rr/(s.rr_sdr_mai*5)*100)):s.rr>0?50:0;
+  const rc=rp>=80?"#16a34a":rp>=40?"#f97316":"#ef4444";
+  const rv=rp>=70?"var(--grn)":rp>=40?"var(--ora)":"var(--red)";
+  const st=s.st||"";
+  return`<tr${st==="Desligado"?' style="opacity:0.35"':''}>
+    <td style="min-width:165px">
+      <span class="ini" style="${ist(si)}">${ini(s.nome)}</span><span class="snm">${s.nome}</span>
+      <div style="margin-left:42px">${lbdg(s.lev,st)} <span style="font-size:11px;color:var(--lit)">${s.ramp}</span> <span style="font-size:10px;color:var(--lit);margin-left:4px">${s.dias}d</span></div>
+    </td>
+    <td><div class="rrv" style="color:${rv}">${s.rr}</div><div class="rrs">mai ${s.rr_sdr_mai}</div><div class="rrbr"><div class="rrbf" style="width:${rp}%;background:${rc}"></div></div></td>
+    <td>${mc(s.txa,s.txa_mai,1,"%")}</td>
+    <td>${mc(s.tapa,s.tapa_mai,1,"%")}</td>
+    <td>${mc(s.ld,s.ld_mai,0)}</td>
+    <td>${mc(s.ad,s.ad_mai,0)}</td>
+    <td class="ac" style="min-width:250px">${ltag(s.lev,st)} ${s.ac}</td>
+  </tr>`;
+}
+
+const TH=`<thead><tr><th>SDR</th><th>RR Sem · mai</th><th>Tx Agend<br><span style="font-weight:400;font-size:10px">agend÷ef.totais</span></th><th>Tx Aparição<br><span style="font-weight:400;font-size:10px">RR÷agend (meta 100%)</span></th><th>Lig/dia<br><span style="font-weight:400;font-size:10px">lig÷(4−off)</span></th><th>Abord/dia<br><span style="font-weight:400;font-size:10px">contatadas÷(4−off)</span></th><th>Ação prioritária</th></tr></thead>`;
+
+function tbl(sdrs){
+  if(!sdrs||!sdrs.length)return"";
+  return`<div class="tw"><table>${TH}<tbody>${sdrs.map((s,i)=>buildRow(s,i)).join("")}</tbody></table></div>`;
+}
+function rdiv(lbl,color,n){return`<div class="rdiv"><span class="rl" style="color:${color}">${lbl}</span><span class="rc">${n} SDR${n!==1?"s":""}</span></div>`;}
+
+const allKeys=Object.keys(SDR_RAW);
+const totF=allKeys.reduce((s,k)=>s+(CFG[k]?CFG[k].faltam:0),0);
+const crit=allKeys.filter(k=>CFG[k]&&CFG[k].status==="vermelho").length;
+const verd=allKeys.filter(k=>CFG[k]&&CFG[k].status==="verde").length;
+const totS=allKeys.reduce((s,k)=>s+SDR_RAW[k].length,0);
+
+document.getElementById("sdr-strip").innerHTML=[
+  {n:totF,l:"RR faltando no mês",c:"var(--red)"},
+  {n:crit,l:"Baldinhos críticos",c:"var(--red)"},
+  {n:verd,l:"Acima da meta",c:"var(--grn)"},
+  {n:totS,l:"SDRs ativos",c:"var(--mut)"},
+].map(i=>`<div class="st"><div class="st-n" style="color:${i.c}">${i.n}</div><div class="st-l">${i.l}</div></div>`).join("");
+
+let first=true;
+document.getElementById("sdr-tabs").innerHTML=TAB_GROUPS.map(g=>{
+  const btns=g.keys.filter(k=>SDR_RAW[k]&&CFG[k]).map(k=>{
+    const cfg=CFG[k],p=pct(cfg.feito,cfg.meta),dc=DC[cfg.status]||"#9ca3af";
+    const on=first?" on":""; if(first)first=false;
+    return`<button class="tab${on}" onclick="sw('${k}')" id="t_${k.replace(/[^a-z0-9]/gi,'_')}">
+      <span class="d8" style="background:${dc}"></span>${cfg.label} <span style="color:var(--lit);font-size:10px">${p}%</span>
+    </button>`;
+  }).join("");
+  return btns?`<div class="tg"><div class="tg-l">${g.lbl}</div><div class="tg-r">${btns}</div></div>`:"";
+}).join("");
+
+function sw(key){
+  document.querySelectorAll("#sdr-tabs .tab").forEach(t=>t.classList.remove("on"));
+  document.querySelectorAll("#sdr-body .panel").forEach(p=>p.classList.remove("on"));
+  document.getElementById("t_"+key.replace(/[^a-z0-9]/gi,"_")).classList.add("on");
+  document.getElementById("ps_"+key.replace(/[^a-z0-9]/gi,"_")).classList.add("on");
+}
+
+document.getElementById("sdr-body").innerHTML=allKeys.map((key,ki)=>{
+  const sdrs=SDR_RAW[key],cfg=CFG[key];
+  if(!sdrs||!cfg)return"";
+  const sc=SC[cfg.status]||"#6b7280",p=pct(cfg.feito,cfg.meta);
+  const need=cfg.status==="verde"
+    ?`🟢 <strong>Acima da meta!</strong> RR/SDR <strong>${cfg.atual}</strong> / meta <strong>${cfg.meta_sdr}</strong>. Faltam <strong>${cfg.faltam} RR</strong>. ${cfg.nota}`
+    :`🎯 Precisamos de <span class="rrbig">${cfg.need} RR hoje</span>. Faltam <strong>${cfg.faltam} RR</strong> em ~11 DUs = <strong>${(cfg.faltam/11).toFixed(1)}/dia</strong>. RR/SDR atual <strong style="color:${sc}">${cfg.atual}</strong> / meta <strong>${cfg.meta_sdr}</strong>. ${cfg.nota}`;
+
+  const byL={};
+  sdrs.forEach(s=>{if(!byL[s.lev])byL[s.lev]=[];byL[s.lev].push(s.nome.split(" ")[0])});
+  const lp=[];
+  if(byL.ausencia)lp.push(`<strong>Ausentes</strong>: ${byL.ausencia.join(", ")}`);
+  if(byL.tx_agend)lp.push(`<strong>Tx agend ↓</strong>: ${byL.tx_agend.join(", ")}`);
+  if(byL.ligacoes)lp.push(`<strong>Lig ↓</strong>: ${byL.ligacoes.join(", ")}`);
+  if(byL.abordadas)lp.push(`<strong>Abord ↓</strong>: ${byL.abordadas.join(", ")}`);
+  if(byL.aparicao)lp.push(`<strong>Aparição ↓</strong>: ${byL.aparicao.join(", ")}`);
+  if(byL.manter)lp.push(`<strong>Em ritmo</strong>: ${byL.manter.join(", ")}`);
+
+  let body="";
+  if(cfg.split){
+    const r=sdrs.filter(s=>s.ir),n=sdrs.filter(s=>!s.ir);
+    body=rdiv("Rampados","#6d28d9",r.length)+tbl(r)+rdiv("Rampando","#c2410c",n.length)+tbl(n);
+  } else { body=tbl(sdrs); }
+
+  const pid="ps_"+key.replace(/[^a-z0-9]/gi,"_");
+  return`<div class="panel${ki===0?" on":""}" id="${pid}">
+    <div class="sh">
+      <span class="d8" style="background:${cfg.dot};width:11px;height:11px;border-radius:50%;flex-shrink:0"></span>
+      <strong style="font-family:'Syne',sans-serif;font-size:16px">${cfg.label}</strong>
+      <span class="ss"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 13c0-3 2.7-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> ${cfg.sup}</span>
+    </div>
+    <div class="card">
+      <div class="cmr" style="background:${cfg.hdr}">
+        <div class="cm"><div class="cv ${pcls(p)}">${p}%</div><div class="cl">% Meta</div></div>
+        <div class="cm"><div class="cv" style="color:${sc}">${cfg.atual}</div><div class="cl">RR/SDR Atual</div></div>
+        <div class="cm"><div class="cv gy">${cfg.meta_sdr}</div><div class="cl">Meta RR/SDR</div></div>
+        <div class="cm"><div class="cv b">${cfg.feito}</div><div class="cl">RR Feitos</div></div>
+        <div class="cm"><div class="cv r">${cfg.faltam}</div><div class="cl">RR Faltando</div></div>
+        <div class="cm"><div class="cv" style="color:${sc}">${cfg.need>0?cfg.need+" hoje":"✓"}</div><div class="cl">Meta Hoje</div></div>
+        <div class="cm"><div class="cv b">${sdrs.filter(s=>!s.st||s.st==="").length}</div><div class="cl">SDRs</div></div>
+      </div>
+      <div class="need">${need}</div>
+      ${lp.length?`<div class="lev">📌 ${lp.join(" &nbsp;·&nbsp; ")}</div>`:""}
+      ${body}
+    </div>
+  </div>`;
+}).join("");
+</script>
+</body>
+</html>
